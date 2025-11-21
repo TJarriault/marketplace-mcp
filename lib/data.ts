@@ -7,6 +7,7 @@ export interface Agent {
   author: string;
   repoUrl: string;
   tags: string[];
+  iconUrl?: string;
   imageUrl?: string;
   installCommand?: string;
 }
@@ -61,5 +62,17 @@ export const agents: Agent[] = [
     repoUrl: "https://github.com/internal/swagger-docs",
     tags: ["API", "Documentation", "OpenAPI"],
     installCommand: "mcp install swagger-docs",
+  },
+  {
+    id: "mcp-looker",
+    name: "MCP Looker",
+    description: "Visualize and analyze your data with powerful dashboard integrations.",
+    fullDescription: "MCP Looker provides seamless integration with your data sources to create beautiful, interactive dashboards. Query your metrics, create visualizations, and share insights with your team. Perfect for data analysts and business intelligence professionals who need real-time data exploration capabilities.",
+    author: "Data Analytics Team",
+    repoUrl: "https://github.com/internal/mcp-looker",
+    tags: ["Analytics", "Dashboard", "BI", "Visualization"],
+    iconUrl: "/images/agents/looker-icon.png",
+    imageUrl: "/images/agents/looker-dashboard.png",
+    installCommand: "npm install -g @mcp/looker",
   },
 ];
